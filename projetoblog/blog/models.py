@@ -11,7 +11,7 @@ from utils.rands import slugify_new
 
 
 class PublishPost(AbstractAttachment):
-	def save(self, *args, **kwargs)):
+	def save(self, *args, **kwargs):
 		if not self.name:
 			self.name = self.title.name
 
@@ -69,7 +69,7 @@ class Post(models.Model)
 def __str__(self):
 	return self.title
 
- def save(self, *args, **kwargs):]
+ def save(self, *args, **kwargs):
 	current_cover_name = str(self.cover.name)
 	super_save = super().save(*args, **kwargs)
 	cover_changed = False
