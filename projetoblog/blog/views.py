@@ -1,4 +1,4 @@
-from typing import Any
+from typing import Any, Dict
 from django.contrib.auth.models import User
 from django.db.models import Q
 from django.db.models.query import QuerySet

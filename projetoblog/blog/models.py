@@ -10,7 +10,7 @@ from django_summernote.models import AbstractAttachment
 from utils.image import resized_image
 from utils.rands import slugify_new
 
-teste 
+
 class PublishPost(AbstractAttachment):
 	def save(self, *args, **kwargs):
 		if not self.name:
@@ -24,7 +24,7 @@ class PublishPost(AbstractAttachment):
 			file_changed = current_file_name != self.file.name
 
 		if file_changed:
-			resize_image(self.file, 900, True, 70)
+			resized_image(self.file, 900, True, 70)
 
 		return super_save
 		
@@ -47,7 +47,7 @@ class PostManager(models.Manager):
 					.order_by('-pk')
   
   
-class Post(models.Model)
+class Post(models.Model):
 
 	objects = PostManager()
 
@@ -70,7 +70,7 @@ class Post(models.Model)
 def __str__(self):
 	return self.title
 
- def save(self, *args, **kwargs):
+def save(self, *args, **kwargs):
 	current_cover_name = str(self.cover.name)
 	super_save = super().save(*args, **kwargs)
 	cover_changed = False
