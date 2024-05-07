@@ -38,21 +38,21 @@ class Page(models.Model):
 
 	def __str__(self):
 		return super().__str__()
-
+  
 
 class PostManager(models.Manager):
 	def get_published(self):
-			return self\
-					.filter(is_published=True)\
-					.order_by('-pk')
-  
-  
+		return self\
+			.filter(is_published=True)\
+			.order_by('-pk')
+
 class Post(models.Model):
 
 	objects = PostManager()
 
 	title = models.CharField(max_length=65)
 	short_description = models.CharField(max_length=65)
+	is_published = models.BooleanField(default=False,)
 	body = models.TextField()
 	cover = models.ImageField(upload_to='posts/%Y/%m/', blank=True, default='')
 	cover_in_post_body = models.BooleanField(
@@ -67,19 +67,21 @@ class Post(models.Model):
 		related_name='post_created_by'
 	)
 
-def __str__(self):
-	return self.title
+	def __str__(self):
+		return self.title
 
-def save(self, *args, **kwargs):
-	current_cover_name = str(self.cover.name)
-	super_save = super().save(*args, **kwargs)
-	cover_changed = False
+	def save(self, *args, **kwargs):
+		current_cover_name = str(self.cover.name)
+		super_save = super().save(*args, **kwargs)
+		cover_changed = False
 
-	if self.cover:
-		cover_changed = current_cover_name != self.cover.name
+		if self.cover:
+			cover_changed = current_cover_name != self.cover.name
 
-	if cover_changed:
-		resized_image(self.cover, 900, True,70)
+		if cover_changed:
+			resized_image(self.cover, 900, True,70)
 
-	return super_save
+		return super_save
+	
+
 	 
