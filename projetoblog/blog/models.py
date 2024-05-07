@@ -1,4 +1,5 @@
 #type: ignore
+#apenas testando
 from enum import unique
 from django.db import models
 from django.contrib.auth.models import User
@@ -9,7 +10,7 @@ from django_summernote.models import AbstractAttachment
 from utils.image import resized_image
 from utils.rands import slugify_new
 
-
+teste 
 class PublishPost(AbstractAttachment):
 	def save(self, *args, **kwargs):
 		if not self.name:
