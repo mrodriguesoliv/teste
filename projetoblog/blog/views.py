@@ -5,7 +5,7 @@ from django.db.models.query import QuerySet
 from django.shortcuts import render
 from django.views.generic import DetailView, ListView
 
-from blog.models import Page, Post
+from blog.models import Post
 
 PER_PAGE = 9
 
