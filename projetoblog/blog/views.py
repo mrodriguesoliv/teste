@@ -9,7 +9,7 @@ from blog.models import Post
 
 PER_PAGE = 9
 
-class Teste(ListView):
+class post_view(ListView):
     def index(request):
         return render(request, 'teste.html')
 
