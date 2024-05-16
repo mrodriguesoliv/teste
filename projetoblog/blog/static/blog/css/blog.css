@@ -1,70 +1,38 @@
-.page-header {
-  background-color: #025483;
-  margin-top: 0;
-  margin-bottom: 40px;
-  padding: 20px 20px 20px 40px;
+
+.blog-header-logo {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif/*rtl:Amiri, Georgia, "Times New Roman", serif*/;
+  font-size: 2.25rem;
 }
 
-.page-header h1,
-.page-header h1 a,
-.page-header h1 a:visited,
-.page-header h1 a:active {
-  color: #ffffff;
-  font-size: 36pt;
+.blog-header-logo:hover {
   text-decoration: none;
 }
 
-h1,
-h2,
-h3,
-h4 {
-  font-family: 'Lobster', cursive;
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif/*rtl:Amiri, Georgia, "Times New Roman", serif*/;
 }
 
-.date {
-  color: #828282;
+.flex-auto {
+  flex: 0 0 auto;
 }
 
-.save {
-  float: right;
+.h-250 { height: 250px; }
+@media (min-width: 768px) {
+  .h-md-250 { height: 250px; }
 }
 
-.post-form textarea,
-.post-form input {
-  width: 100%;
+/* Pagination */
+.blog-pagination {
+  margin-bottom: 4rem;
 }
 
-.top-menu,
-.top-menu:hover,
-.top-menu:visited {
-  color: #ffffff;
-  float: right;
-  font-size: 26pt;
-  margin-right: 20px;
+/*
+ * Blog posts
+ */
+.blog-post {
+  margin-bottom: 4rem;
 }
-
-.post {
-  margin-bottom: 70px;
-}
-
-.post h2 a,
-.post h2 a:visited {
-  color: #000000;
-}
-
-.post > .date,
-.post > .actions {
-  float: right;
-}
-
-.btn-secondary,
-.btn-secondary:visited {
-  color: #C25100;
-  background: none;
-  border-color: #C25100;
-}
-
-.btn-secondary:hover {
-  color: #FFFFFF;
-  background-color: #C25100;
+.blog-post-meta {
+  margin-bottom: 1.25rem;
+  color: #727272;
 }
