@@ -4,6 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'blog/css/blog.css' %}">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
         <style>
@@ -14,23 +15,23 @@
 
 
     <body>
+        
+            <header class="w3-container w3-center w3-padding-32"> 
+                <h1><b>PROJETO BLOG</b></h1>
+                <p>Bem-vindo ao blog de <span class="w3-tag">Tainá Alves</span></p>
+            </header>
 
-        <header class="w3-container w3-center w3-padding-32"> 
-            <h1><b>PROJETO BLOG</b></h1>
-            <p>Bem-vindo ao blog de <span class="w3-tag">Tainá Alves</span></p>
-        </header>
+            
+            {% for post in posts %}
+                <div class="layout">
+                    <h3><b>{{post.title}}</b></h3>
+                    <h5>{{post.body}}, <span class="w3-opacity">{{post.published_date}}</span></h5>
+                </div>
+            {% endfor %} 
 
-        {% for post in posts %}
-        <div class="w3-col l8 s12">
-            <div class="w3-card-4 w3-margin w3-white">
-            <img src="/w3images/woods.jpg" alt="Nature" style="width:100%">
-            <div class="w3-container">
-                <h3><b>{{post.title}}</b></h3>
-                <h5>Title description, <span class="w3-opacity">April 7, 2014</span></h5>
-            </div>
-        {% endfor %} 
-
+        </section>
     </body>
+   
 
 
 </html>
