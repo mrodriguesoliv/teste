@@ -1,7 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
 <html>
-    <div class="pagestyle">
         <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,31 +21,15 @@
                 {% for post in posts %}  <!-- for para exibir posts-->
                 <div class="containerblog">
                     <div class="style">
-                        <img src="{% static 'images/1.jpg' %}" alt="Minha Imagem">
-                            <h2><b>{{post.title}}</b></h2>
-                            <h3>{{post.body}}</h3>
-                            "teste"
-                            <span class="w3-opacity">{{post.published_date}}</span>
+                        <img src="{% static 'images/1.jpg' %}" alt="Minha Imagem" class="centeredimages">
+                        <h2><b>{{post.title}}</b></h2>
+                        <h3>{{post.body}}</h3>
+                        <span class="w3-opacity">{{post.published_date}}</span>
                     </div>
                 </div>
-                {% endfor %} 
-                
-
-
-                
-                {% for post in posts %} <!-- for para exibir body do post-->
-                <div class="containerblog">
-                    <div class="style">
-                        <img src="{% static 'images/1.jpg' %}" alt="Minha Imagem">
-                            <h2><b>{{post.title}}</b></h2>
-                            <h3>{{post.body}}</h3>
-                            <span class="w3-opacity">{{post.published_date}}</span>
-                    </div>
-                </div>
-                {% endfor %} 
+                {% endfor %}  
                 
         </body>
-    </div>
 
 
 </html>
