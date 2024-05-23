@@ -7,29 +7,26 @@
             <link rel="stylesheet" href="{% static 'blog/css/blog.css' %}">
             <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat">
             <title>BLOG PROJECT</title>
         </head>
 
-
+    
         <body>
-            
                 <header class="w3-container w3-center w3-padding-32"> 
                     <h1><b>PROJETO BLOG</b></h1>
                     <p>Bem-vindo ao blog de <span class="w3-tag">Tainá Alves</span></p>
                 </header>
-
+            
+            <div class="testeblogg">
                 {% for post in posts %}  <!-- for para exibir posts-->
                 <div class="containerblog">
-                    <div class="style">
-                        <img src="{% static 'images/1.jpg' %}" alt="Minha Imagem" class="centeredimages">
-                        <h2><b>{{post.title}}</b></h2>
-                        <h3>{{post.body}}</h3>
-                        <span class="w3-opacity">{{post.published_date}}</span>
-                    </div>
+                    <img src="{% static 'images/1.jpg' %}" alt="Minha Imagem" class="centeredimages">
+                    <span class="titleblog">{{post.title}}</span>
+                    <span class="bodyblog">{{post.body}}</span>
+                    <span class="w3-opacity">{{post.published_date}}</span>
                 </div>
                 {% endfor %}  
-                
-        </body>
-
+            </div>
 
 </html>
