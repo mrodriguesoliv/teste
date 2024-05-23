@@ -5,20 +5,21 @@
   object-fit: cover;
 }
 
-
-.testeblogg{
+.containerblog{
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
-}
+  padding: 100px;
+  margin: 10px;
+  justify-content: space-between;
+  }
 
-.containerblog {
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-bottom: 20px;
+.postblog {
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 60px;
   vertical-align: top;
-  width: 400px;
-  height: 600px;
+  width: 350px;
+  height: 500px;
   background-color: rgba(255, 255, 255, 0.993); /*   Cor de fundo dos posts */
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Sombra preta suave */
 }
@@ -26,7 +27,7 @@
 
 .bodyblog {
   display:block;
-  color:blueviolet;
+  color:rgb(0, 0, 0);
   font-family: 'Montserrat', sans-serif;
   margin: 10px;
   text-align: justify;
@@ -34,9 +35,18 @@
 
 .titleblog {
   display: block;
-  color:darkslategrey;
+  color:rgb(0, 0, 0);
   font-family: 'Montserrat', sans-serif;
   text-align: center;
   font-weight: bold;
-  font-weight: 15px;  
+  font-size: 20px;  
+  margin-top: 10px;
+  margin-left: 10px;
+  text-align: left;
+}
+
+.dateblog {
+  display: flex;
+  font-family: 'Montserrat', sans-serif;
+  margin: 10px;
 }

@@ -18,13 +18,13 @@
                     <p>Bem-vindo ao blog de <span class="w3-tag">Tainá Alves</span></p>
                 </header>
             
-            <div class="testeblogg">
+            <div class="containerblog">
                 {% for post in posts %}  <!-- for para exibir posts-->
-                <div class="containerblog">
+                <div class="postblog">
                     <img src="{% static 'images/1.jpg' %}" alt="Minha Imagem" class="centeredimages">
                     <span class="titleblog">{{post.title}}</span>
                     <span class="bodyblog">{{post.body}}</span>
-                    <span class="w3-opacity">{{post.published_date}}</span>
+                    <span class="dateblog">{{post.published_date}}</span>
                 </div>
                 {% endfor %}  
             </div>
