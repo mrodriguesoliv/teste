@@ -22,7 +22,7 @@
                 {% for post in posts %}  <!-- for para exibir posts-->
                 <div class="postblog">
                     <img src={{post.cover}} alt="Minha Imagem" class="centeredimages">
-                    <span class="titleblog">{{post.title}}</span>
+                    <a href="{% url 'blog:testess' pk=post.pk %}">{{post.title}}</a>
                     <span class="bodyblog">{{post.body}}</span>
                     <span class="dateblog">{{post.published_date}}</span>
                 </div>
