@@ -3,7 +3,6 @@
 <html>
 
 <link rel="stylesheet" href="{% static 'blog/css/blog.css' %}">
-<link rel="stylesheet" href="{% static 'blog/css/image' %}">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat">
@@ -13,9 +12,8 @@
             <h1><b>PROJETO BLOG</b></h1>
             <p>Bem-vindo ao blog de <span class="w3-tag">Tainá Alves</span></p>
         </header>
-
         {% block content %}
-            <img href="{% static post.cover %}" alt="Minha Imagem">
+            <img src="{% static post.cover %}" alt="Minha Imagem">
             <span class="titleblog">{{post.title}}</span>
             <span class="bodyblog">{{post.body}}</span>
             <span class="dateblog">{{post.published_date}}</span>
