@@ -1,6 +1,7 @@
 {% load static %}
 <!DOCTYPE html>
 <html>
+    <div class="pageview">
         <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,15 +19,15 @@
                     <p>Bem-vindo ao blog de <span class="w3-tag">Tainá Alves</span></p>
                 </header>
             
-            <div class="containerblog">
+            <div class="containerpostboxmodel">
                 {% for post in posts %}  <!-- for para exibir posts-->
-                <div class="postblog">
+                <div class="blogpost">
                     <img src="{% static post.cover %}" alt="Minha Imagem" class="centeredimages">
-                    <span class="titleblog"><a href="{% url 'blog:post_detail' pk=post.pk %}">{{post.title}}</a></span>
-                    <span class="bodyblog">{{post.body}}</span>
-                    <span class="dateblog">{{post.published_date}}</span>
+                    <span class="titlepost"><a href="{% url 'blog:post_detail' pk=post.pk %}">{{post.title}}</a></span>
+                    <span class="bodypost">{{post.body}}</span>
+                    <span class="datepost">{{post.published_date}}</span>
                 </div>
                 {% endfor %}  
             </div>
-     
+    </div>
 </html>
