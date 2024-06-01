@@ -18,13 +18,13 @@ def post_detail(request, pk):
 
 def post_new(request):
     if request.method == "POST":
-        form = FormularioPost(request.POST)
+        form = FormularioPost(request.POST, request.FILES)
         if form.is_valid():
-            npost = form.save(commit=False)
-            npost.author = request.user
-            npost.published_date = timezone.now()
-            npost.save()
-            return redirect('blog:post_detail', pk=npost.pk)
+            post = form.save(commit=False)
+            post.author = request.user
+            post.published_date = timezone.now()
+            post.save()
+            return redirect('blog:post_detail', pk=post.pk)
     else:
          form = FormularioPost()
     return render(request, 'blog/post_new.html', {'form': form})
