@@ -24,7 +24,7 @@
   vertical-align: top;
   width: 350px;
   height: 500px;
-  background-color: rgba(247, 243, 224, 0.979); /*   Cor de fundo dos posts */
+  background-color: rgba(247, 245, 237, 0.979); /*   Cor de fundo dos posts */
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Sombra preta suave */
 }
 
@@ -60,6 +60,9 @@
   background-color: rgba(236, 236, 236);
 }
 
+.newpost{
+  
+}
 
 
 
