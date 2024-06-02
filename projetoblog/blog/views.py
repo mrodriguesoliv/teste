@@ -1,11 +1,8 @@
-from typing import Any, Dict
-from django.contrib.auth.models import User
-from django.db.models import Q
-from django.db.models.query import QuerySet
-from django.views.generic import DetailView, ListView
-from django.utils import timezone
 from blog.models import Post
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, redirect
+from .forms import FormularioPost
+from blog.models import timezone
+from django.urls import reverse
 
 PER_PAGE = 9
 
@@ -17,3 +14,17 @@ def post_view(request):
 def post_detail(request, pk):
     post = Post.objects.get(id=pk)
     return render(request, 'blog/post_detail.html', {'post': post})
+
+
+def post_new(request):
+    if request.method == "POST":
+        form = FormularioPost(request.POST, request.FILES)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.author = request.user
+            post.published_date = timezone.now()
+            post.save()
+            return redirect('blog:post_detail', pk=post.pk)
+    else:
+         form = FormularioPost()
+    return render(request, 'blog/post_new.html', {'form': form})

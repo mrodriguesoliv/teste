@@ -1,0 +1,8 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'blog/css/blog.css' %}">
+
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <span class="newpost">{{ form.as_p }}</span>
+    <button type="submit">Save</button>
+</form>
