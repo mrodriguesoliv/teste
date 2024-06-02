@@ -63,7 +63,18 @@
 }
 
 .newpost{
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 400px; /* Largura máxima do formulário */
+  margin: 0 auto; /* Centraliza o formulário horizontalmente */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: rgb(247, 245, 237, 0.979);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Sombra preta suave */
 }
 
 
