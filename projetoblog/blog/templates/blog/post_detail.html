@@ -13,6 +13,12 @@
                         <h1><b>PROJETO BLOG</b></h1>
                         <p>Aproveite o blog de <span class="w3-tag">Tainá Alves</span></p>
                     </header>
+
+                    <div class="editpost">
+                        <a href="{% url 'blog:post_edit' pk=post.pk %}">Editar Postagem</a>
+                    </div>
+
+
                     {% block content %}
                         <img src="{% static post.cover %}" alt="Minha Imagem" class="centeredimagesdetail">
                         <span class="titledetail">{{post.title}}</span>

@@ -28,3 +28,23 @@ def post_new(request):
     else:
          form = FormularioPost()
     return render(request, 'blog/post_new.html', {'form': form})
+
+
+def post_edit(request, pk):
+    post = Post.objects.get(id=pk)
+    if request.method == "POST":
+        form = FormularioPost(request.POST, instance=post)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.author = request.user
+            post.published_date = timezone.now()
+            post.save()
+            return redirect('blog:post_detail', pk=post.pk)
+    else:
+        form = FormularioPost(instance=post)
+    return render(request, 'blog/post_edit.html', {'form': form})
+
+
+        
+
+

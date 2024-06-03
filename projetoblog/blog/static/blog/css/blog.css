@@ -77,7 +77,17 @@
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Sombra preta suave */
 }
 
-
+.insertpost {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  color:rgb(0, 0, 0);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 110%;
+  text-decoration-line:none;
+}
 
 
 
@@ -126,4 +136,16 @@
   width: 50%;
   height: 50%;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Sombra preta suave */
+}
+
+.editpost {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  color:rgb(0, 0, 0);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 110%;
+  text-decoration-line:none;
 }

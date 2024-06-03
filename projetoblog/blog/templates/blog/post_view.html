@@ -20,7 +20,9 @@
                     <p>Bem-vindo ao blog de <span class="w3-tag">Tainá Alves</span></p>
                 </header>
             
-                <a href="{% url 'blog:post_new' %}"><span>teste</span></a>
+                <div class="insertpost">
+                    <a href="{% url 'blog:post_new' %}">+ Adicionar Postagem</a>
+                </div>
 
             <div class="containerpostboxmodel">
                 {% for post in posts %}  <!-- for para exibir posts-->
