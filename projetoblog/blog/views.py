@@ -2,9 +2,11 @@ from blog.models import Post
 from django.shortcuts import render, redirect
 from .forms import FormularioPost
 from blog.models import timezone
+from django.contrib.auth.decorators import login_required
 from django.urls import reverse
 
 PER_PAGE = 9
+
 
 def post_view(request):
     posts = Post.objects.order_by('published_date')
@@ -15,7 +17,7 @@ def post_detail(request, pk):
     post = Post.objects.get(id=pk)
     return render(request, 'blog/post_detail.html', {'post': post})
 
-
+@login_required
 def post_new(request):
     if request.method == "POST":
         form = FormularioPost(request.POST, request.FILES)

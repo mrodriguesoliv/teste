@@ -2,7 +2,7 @@ version: '3'
 
 services:
   web:
-    image: matheusoliv1/bloglindo:latest
+    image: matheusoliv1/bloglindo:2
     volumes:
       - .:/app
     ports:

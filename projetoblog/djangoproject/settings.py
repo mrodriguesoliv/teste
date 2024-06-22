@@ -29,6 +29,7 @@ ALLOWED_HOSTS = ["*"]
 # Application definition
 
 INSTALLED_APPS = [
+    'accounts', 
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -37,8 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_summernote',
 
-    # Meus apps
-    'blog'
+    'blog',
 ]
 
 MIDDLEWARE = [
@@ -73,6 +73,8 @@ WSGI_APPLICATION = 'djangoproject.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
+
+AUTH_USER_MODEL = 'blog.User'
 
 DATABASES = {
     'default': {
@@ -124,6 +126,12 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'blog/static/')
 MEDIA_URL = '/uploads/'
 
 STATIC_ROOT = 'static'
+
+LOGIN_URL = 'login'
+
+LOGIN_REDIRECT_URL = '/'
+
+LOGOUT_REDIRECT_URL = '/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
