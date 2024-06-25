@@ -29,7 +29,7 @@ ALLOWED_HOSTS = ["*"]
 # Application definition
 
 INSTALLED_APPS = [
-    'accounts', 
+    'blog',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -37,8 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_summernote',
-
-    'blog',
+    
 ]
 
 MIDDLEWARE = [
@@ -74,7 +73,7 @@ WSGI_APPLICATION = 'djangoproject.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-AUTH_USER_MODEL = 'blog.User'
+AUTH_USER_MODEL = 'blog.Autor'
 
 DATABASES = {
     'default': {
