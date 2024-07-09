@@ -73,7 +73,6 @@ WSGI_APPLICATION = 'djangoproject.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-AUTH_USER_MODEL = 'blog.Autor'
 
 DATABASES = {
     'default': {
@@ -84,6 +83,10 @@ DATABASES = {
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
+
+AUTH_USER_MODEL = 'blog.Usuario'
+
+LOGIN_REDIRECT_URL = 'blog/post_view'
 
 AUTH_PASSWORD_VALIDATORS = [
     {
